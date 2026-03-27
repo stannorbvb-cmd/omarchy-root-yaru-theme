@@ -2,8 +2,6 @@
  
 > *A dark, elegant Base16 theme for Omarchy. Where Tokyo nights meet terminal precision.*
  
-![Sakura Protocol Preview](screenshot-2026-03-27_21-09-29.png)
- 
 ---
  
 ## About
