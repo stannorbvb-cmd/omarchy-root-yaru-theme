@@ -5,55 +5,90 @@
 @define-color foreground #f7f8fa;
 @define-color background #1e2028;
 
-window {
-  background: @surface;
-  border-radius: 15px;
-}
+/* ===== SIGINT Terminal — Walker Launcher ===== */
 
+/* ===== Outer frame ===== */
 window .box-wrapper {
   background: @background;
-  color: @text;
-  border: 1px solid @border;
-  border-radius: 15px;
   padding: 10px;
+  border: 2px solid @border;
+  border-radius: 20px;
   margin: 0;
 }
 
-window .search-container,
-window .search {
-  background: @base;
-  color: @foreground;
+/* ===== Inner frame ===== */
+window .content {
   border: 1px solid @border;
-  border-radius: 10px;
-  padding: 8px 12px;
-  margin-bottom: 6px;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.3px;
+  padding: 4px;
 }
 
-window .search-container:focus,
-window .search:focus {
-  border: 1px solid @selected-text;
-}
-
-window child {
-  background: @surface;
-  color: @muted;
-  border: none;
-  border-radius: 8px;
-  padding: 4px 8px;
-  margin: 0;
-  font-size: 12px;
-  letter-spacing: 0.2px;
-}
-
-window child:selected,
-window child:focus,
-window child:checked {
+/* ===== Search bar ===== */
+window .search-container {
   background: @base;
+  border: 1px solid @border;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+window .input {
+  color: @foreground;
+  padding: 3px;
+  font-weight: 700;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-size: 12px;
+}
+
+window .placeholder {
+  color: @border;
+  opacity: 0.6;
+}
+
+/* ===== List items ===== */
+child {
+  background: transparent;
+  padding: 2px;
+  margin: 0;
+  border: none;
+}
+
+/* ===== Hover ===== */
+child:hover {
+  background: alpha(@border, 0.1);
+}
+
+/* ===== Selected item ===== */
+child:selected {
+  background: alpha(@selected-text, 0.15);
+  border: 1px solid @selected-text;
+  border-radius: 20px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* ===== Icon ===== */
+child image {
+  margin-right: 10px;
+}
+
+/* ===== App name ===== */
+child label {
+  color: @text;
+  font-weight: 800;
+}
+
+/* ===== Category text ===== */
+child label.secondary {
+  color: @border;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ===== Selected text colors ===== */
+child:selected label {
   color: @selected-text;
-  font-weight: 500;
-  border-left: 2px solid @selected-text;
-  padding-left: 10px;
+  
+}
+
+child:selected label.secondary {
+  color: alpha(@selected-text, 0.7);
 }
