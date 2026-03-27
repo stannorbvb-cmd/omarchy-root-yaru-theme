@@ -1,0 +1,59 @@
+@define-color selected-text #d45c7a;
+@define-color text #f7f8fa;
+@define-color base #1e2028;
+@define-color border #8b909e;
+@define-color foreground #f7f8fa;
+@define-color background #1e2028;
+
+window {
+  background: @surface;
+  border-radius: 15px;
+}
+
+window .box-wrapper {
+  background: @background;
+  color: @text;
+  border: 1px solid @border;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0;
+}
+
+window .search-container,
+window .search {
+  background: @base;
+  color: @foreground;
+  border: 1px solid @border;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+window .search-container:focus,
+window .search:focus {
+  border: 1px solid @selected-text;
+}
+
+window child {
+  background: @surface;
+  color: @muted;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+}
+
+window child:selected,
+window child:focus,
+window child:checked {
+  background: @base;
+  color: @selected-text;
+  font-weight: 500;
+  border-left: 2px solid @selected-text;
+  padding-left: 10px;
+}
