@@ -39,6 +39,7 @@ Built around a deep charcoal void and a striking sakura pink accent — clean, m
 <img width="2560" height="1600" alt="screenshot-2026-03-27_21-09-29" src="https://github.com/user-attachments/assets/d2dd0065-4cd7-4c95-9519-a66b06e8acf5" />
 
 <img width="2560" height="1600" alt="screenshot-2026-03-27_21-06-17" src="https://github.com/user-attachments/assets/26536637-1220-4900-93cb-2b0dc49d8c6a" />
+
 ---
 
 ## Install
